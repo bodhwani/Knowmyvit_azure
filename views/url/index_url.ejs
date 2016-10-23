@@ -1,13 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>VIT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="../../styles/layout.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+
+
+
 <div class="container">
   <h3>User Administration</h3>
+
+
+
+
+
   <table class='table'>
     <tr>
-      <th>Name</th>
-      <th>Url</th>
-      <th>Comments</th>
+<thead>
+      <th>Comment</th>
       <th>Created At</th>
       <th>Updated At</th>
-
+</thead>
 
     </tr>
 
@@ -16,9 +35,8 @@
 
 
 
-      <td><%= url.name %></td>
-      <td><%= url.url %></td>
-      <td><%= url.comments %></td>
+
+      <td><%= url.body %></td>
       <td><%= url.creationDate %></td>
       <td><%= url.updateDate %></td>
 
@@ -36,5 +54,31 @@
 
 
       <% }) %>
+
+
   </table>
+
+
+
+  <section class="row new-post">
+    <div class="col-md-6 col-md-offset-3">
+      <header><h3>What do you have to say?</h3></header>
+      <form action="/url/create" method="post">
+        <div class="form-group">
+          <textarea class="form-control" name="body" id="new_post" rows="5" placeholder="Your Post"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Post</button>
+        <input type="hidden"  value="" name="_token" />
+      </form>
+    </div>
+
+  </section>
+
+  <section class="row posts">
+    <div class="col-md-6 col-md-offset-3">
+      <header><h3>What other people say....</h3></header>
+    </div>
+
+  </section>
+
 </div>

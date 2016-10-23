@@ -1,12 +1,33 @@
+//
+// module.exports = {
+//
+//
+//   attributes: {
+//     uid: 'STRING',
+//     name: 'STRING',
+//     email: 'STRING',
+//
+//   }
+// };
+//
+
+
+
+
+
 module.exports = {
 
   schema: true,
 
+
+
   attributes: {
+
+
+    uid: 'STRING',
 
     name: {
       type: 'string',
-      required: true
     },
 
 
@@ -18,41 +39,13 @@ module.exports = {
     email: {
       type: 'string',
       email: true,
-      required: true,
       unique: true
     },
-
-    branch : {
-      type : 'string'
-    },
-
-    role : {
-      type : 'string'
-    },
-
-    position : {
-      type : 'string'
-    },
-
-    contact : {
-      type : 'integer'
-    },
-
-    domain : {
-      type : 'string'
-    },
-
-
 
     encryptedPassword: {
       type: 'string'
     },
 
-
-    admin: {
-      type: 'boolean',
-      defaultsTo: false
-    },
 
 
 
@@ -64,14 +57,17 @@ module.exports = {
     toJSON: function() {
       var obj = this.toObject();
       delete obj.password;
-      delete obj.confirmation1;
+      delete obj.confirmation;
       delete obj._csrf;
       return obj;
     }
 
+
+
   } ,
 
     beforeValidation: function (values, next) {
+    console.log('entered into beforeVlidation');
     if (typeof values.admin !== 'undefined') {
       if (values.admin === 'unchecked') {
         values.admin = false;
@@ -82,18 +78,22 @@ module.exports = {
     next();
   },
 
-   beforeCreate: function (values, next) {
-     if (!values.password || values.password != values.confirmation) {
-       return next({err: ["Password doesn't match password confirmation."]});
-     }
+   // beforeCreate: function (values, next) {
+   //   if (!values.password || values.password != values.confirmation) {
+   //     return next({err: ["Password doesn't match password confirmation."]});
+   //   }
+   //
+   //   require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPassword) {
+   //     if (err) return next(err);
+   //     values.encryptedPassword = encryptedPassword;
+   //
+   //     next();
+   //   });
+   // }
 
-     require('bcrypt').hash(values.password, 10, function passwordEncrypted(err, encryptedPassword) {
-       if (err) return next(err);
-       values.encryptedPassword = encryptedPassword;
-
-       next();
-     });
-   }
 
 
 };
+
+
+

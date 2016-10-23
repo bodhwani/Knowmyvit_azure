@@ -1,6 +1,6 @@
 
 module.exports = {
-  
+
   'new1' : function(req,res){
     res.view();
   },
@@ -19,7 +19,9 @@ module.exports = {
 
       console.log(url.updateDate);
 
-      res.redirect('/url/show_url/' + url.id);
+      res.redirect('/url/index_url');
+
+       // res.redirect('/url/show_url/' + url.id);
 
 
     });

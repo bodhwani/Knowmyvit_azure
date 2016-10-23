@@ -14,6 +14,12 @@
 
 module.exports.session = {
 
+  adapter: 'mongo',
+  host: 'localhost',
+  port: 27017,
+  db: 'sails-passport-example',
+  collection: 'sessions',
+
   /***************************************************************************
   *                                                                          *
   * Session secret is automatically generated when your new app is created   *

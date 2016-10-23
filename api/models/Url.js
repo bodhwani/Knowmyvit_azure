@@ -7,13 +7,9 @@ module.exports = {
 
 
   attributes: {
-    name: {
-      type: 'string',
-      required: true
-    },
 
-    url: {
-      type: 'string',
+    body : {
+      type : 'text'
     },
 
     comments: {

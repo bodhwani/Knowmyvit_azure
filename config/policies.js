@@ -19,6 +19,19 @@
 
 module.exports.policies = {
 
+  '*': "flash",
+
+  user:{
+    'new' : "flash",
+    create : "flash",
+    show : "userCanSeeProfile",
+    edit : "userCanSeeProfile",
+    update : "userCanSeeProfile",
+    login : "flash",
+    logout : "flash",
+    // '*' : "admin"
+  }
+
   /***************************************************************************
   *                                                                          *
   * Default policy for all controllers and actions (`true` allows public     *
@@ -26,16 +39,16 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-   '*': "flash",
-
-  user:{
-     'new' : "flash",
-    create : "flash",
-     show : "userCanSeeProfile",
-     edit : "userCanSeeProfile",
-     update : "userCanSeeProfile",
-    '*' : "admin"
-  }
+  //  '*': "flash",
+  //
+  // user:{
+  //    'new' : "flash",
+  //   create : "flash",
+  //    show : "userCanSeeProfile",
+  //    edit : "userCanSeeProfile",
+  //    update : "userCanSeeProfile",
+  //   '*' : "admin"
+  // }
   /***************************************************************************
   *                                                                          *
   * Here's an example of mapping some policies to run before a controller    *
