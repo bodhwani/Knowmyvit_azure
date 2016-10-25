@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Academic A Education Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
   <link href="../../styles/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
   <link href="../../styles/materialize.css" rel="stylesheet" type="text/css" media="all" />
   <link href="../../styles/materialize.min.css" rel="stylesheet" type="text/css" media="all" />
@@ -22,6 +21,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href="../../styles/materialize.css" rel="stylesheet" type="text/css" media="all" />
   <link href="../../styles/materialize.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link type = "text/css" rel="stylesheet" href="../../font_awesome/css/font-awesome.css">
+  <link type="text/css" rel="stylesheet" herf="../../font_awesome/css/font-awesome.min.css">
 </head>
 <body>
 <div class="header head">
@@ -61,11 +62,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <% if (req.isAuthenticated()) { %>
 
             <ul class="nav navbar-nav cl-effect-8">
-              <li ><a class="" href="/user/show/<%= user.id %>">Home </a></li>
+              <li ><a class="" href="/user/show/<%= user.id %>">Home</a></li>
               <li><a href="/user/hostels_1/<%= user.id %>">Hostels</a></li>
               <li><a href="/user/mess_1/<%= user.id %>">Mess</a></li>
-              <li><a href="/da/index_da/">Digital assignment</a></li>
+              <li><a href="/da/index_da/<%= session.User.id %>">Assignments</a></li>
               <li><a href="/user/restaurents_1/<%= user.id %>">Restaurents</a></li>
+              <li><a href="/url/index_url/<%= user.id %>">Doubts</a></li>
+
             </ul>
 
 
@@ -85,237 +88,145 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
 </div>
-
-  <div class="content">
+<!-- home -->
+<div class="about">
   <div class="container">
 
-  <div class="content-mid">
-  <div class="col-md-4 content-top1">
-  <div class=" content-top2">
-  <h4>Design Thinking</h4>
-  <h6> There are many variations</h6>
-  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-  </div>
-  </div>
-  <div class="col-md-4 content-top1">
-  <div class=" content-top2">
-  <h4>Book Library </h4>
-  <h6> There are many variations</h6>
-  <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-  </div>
-  </div>
-  <div class="col-md-4 content-mid-1">
-  <div class="port effect-1">
-  <div class="image-box">
-  <img src="../../images/K_block.png" alt="" class="img-responsive">
-  </div>
-  <div class="text-desc text-ed">
-  <h6>Education</h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
-  </div>
-  </div>
-  </div>
-  <div class="clearfix"></div>
-  </div>
-  </div>
-  </div>
+    <div class="about-head">
+      <h2>Small Description</h2>
+      <p>What is Know My VIT?.</p>
+    </div>
 
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1"  style="padding-bottom: 5%">
+        <h4 style="text-align: justify">&nbsp; &nbsp;&nbsp;Hostels</h4>
+        <div class="port effect-1">
+          <div class="image-box">
+            <img   src="../../images/L_block.png" style="height: 40%; width: 90%" alt="" class="img-responsive">
+          </div>
+          <div class="text-desc text-ed">
+            <h6>Hostels</h6>
+            <p style="color: white">Check out the requirements,pros and cons, which will help you a lot.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5>Now no need to go and check each and every block's rooms.
+          Here, you can see all the  pros and cons of each and every block and at what CGPA, you may get your desired block.
+        This website will also save your efficient time which can be devoted in other activities.</h5>
+
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1" style="padding-bottom: 5%">
+        <h4 style="text-align: justify">&nbsp; &nbsp;&nbsp;&nbsp; Mess</h4>
+
+        <div class="port effect-1">
+          <div class="image-box">
+            <img src="../../images/K_block.png" style="height: 40%; width: 90%" alt="" class="img-responsive">
+          </div>
+          <div class="text-desc text-ed">
+            <h6>Mess</h6>
+            <p style="color: white">Choose your mess wisely!</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5>Here you can compare easily all types of mess and choose accordingly to your block location.
+          Once we choose mess, we can change it after one month and later it is difficult to change as mess preserving good quality of food will not be available.</h5>
+
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1" style="padding-bottom: 5%">
+        <h4 style="text-align: justify">  Assignments</h4>
+
+        <div class="port effect-1">
+          <div class="image-box">
+            <img src="../../images/assignments.png" style="height: 40%; width: 90%" alt="" class="img-responsive">
+          </div>
+          <div class="text-desc text-ed">
+            <h6>Assignments</h6>
+            <p style="color: white">Go to the Assignments link if you are facing any difficulty.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5>Facing any difficulty in doing your assignments?
+          </br>
+          We will try to help you in doing your CAL Section(which includes digital assignments,lab assignments etc).
+          In Digital Assignment section, you can go the link according to your required assignment and download that file easily.
+          </br>You can also help others by uploading your assignments as helping others is what makes you a successful person.
+
+        </h5>
+
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1" style="padding-bottom: 5%">
+        <h4 style="text-align: justify">Restaurents</h4>
+
+        <div class="port effect-1">
+          <div class="image-box">
+            <img src="../../images/vfc.png" style="height: 40%; width: 90%" alt="" class="img-responsive">
+          </div>
+          <div class="text-desc text-ed">
+            <h6>Restaurents</h6>
+            <p style="color: white">Choose your restaurent according to your budget.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5> Want to go outside for lunch or dinner?
+          </br>
+          Now you can easily compare all the famous restaurents nearby VIT.
+          This will give you an idea about how is the restaurent, what is the location and is it expensive or not?
+
+        </h5>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
   <!---->
-  <div class="services">
-  <div class="container">
-  <div class="service-head">
-  <h3>Services</h3>
-  <p> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-  </div>
-  <div class="servies-top">
-  <div class="col-md-7 us-ser">
-  <div class=" why-choose">
-  <div class=" hi-icon-effect-2 hi-icon-effect-2a">
-  <a href="#set-6" class="hi-icon  glyphicon glyphicon-book"></a>
-  </div>
-  <div class="ser-top ">
-  <h5>Our Values1</h5>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-  </div>
-  <div class="clearfix"> </div>
-  </div>
-  <div class=" why-choose">
-  <div class=" hi-icon-effect-2 hi-icon-effect-2a">
-  <a href="#set-6" class="hi-icon  glyphicon glyphicon-leaf"></a>
-  </div>
-  <div class="ser-top">
-  <h5>Our Strategy</h5>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-  </div>
-  <div class="clearfix"> </div>
-  </div>
-  <div class=" why-choose">
-  <div class=" hi-icon-effect-2 hi-icon-effect-2a">
-  <a href="#set-6" class="hi-icon  glyphicon glyphicon-pencil"></a>
-  </div>
-  <div class="ser-top">
-  <h5>Our Mission</h5>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-  </div>
-  <div class="clearfix"> </div>
-  </div>
 
-  </div>
-  <div class="col-md-5 service-mid">
-  <img src="../../images/3.png" alt="" class="img-responsive">
-  </div>
-  <div class="clearfix"> </div>
-  </div>
-  </div>
-  </div>
-
-  <div class="test">
-  <div class="container">
-  <h3>Testimonials</h3>
-  <div  class=" test-grid-1" >
-  <div class="col-md-6 test-wrapper">
-  <img src="../../images/H_block.png" alt="" class="img-responsive" ">
-  <div class="test-grid">
-  <div class="test-gr">
-  <h4>Andery</h4>
-  <span>Ceo</span>
-  </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-  </div>
-  <div class="clearfix"></div>
-  </div>
-  <div class="col-md-6 test-wrapper">
-  <img src="../../images/anna_audi.png" alt="" class="img-responsive">
-  <div class="test-grid">
-  <div class="test-gr">
-  <h4>Hailey</h4>
-  <span>Principal </span>
-  </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-  </div>
-  <div class="clearfix"></div>
-  </div>
-
-  <div class="clearfix"> </div>
-  </div>
-  <div  class=" test-grid-2" >
-  <div class="col-md-6 test-wrapper">
-  <img src="../../images/K_block.png" alt="" class="img-responsive">
-  <div class="test-grid">
-  <div class="test-gr">
-  <h4>Quincy</h4>
-  <span>Manager</span>
-  </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-  </div>
-  <div class="clearfix"></div>
-  </div>
-  <div class="col-md-6 test-wrapper">
-  <img src="../../images/L_Block.png
-  " alt="" class="img-responsive">
-  <div class="test-grid">
-  <div class="test-gr">
-  <h4>Barb</h4>
-  <span>professor</span>
-  </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-  </div>
-  <div class="clearfix"></div>
-  </div>
-
-  <div class="clearfix"> </div>
-  </div>
-  </div>
-  </div>
-
-  <!---->
-  <div class="content-bottom">
-  <h1>Gallery</h1>
-  <div class="content-in">
-  <div class="port effect-1">
-  <div class="image-box">
-  <img src="../../images/fi.jpg" alt="" class="img-responsive">
-  </div>
-  <div class="text-desc">
-  <h6>Education</h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
-  </div>
-  </div>
-  </div>
-  <div class="content-in">
-  <div class="port effect-1">
-  <div class="image-box">
-  <img src="../../images/logo1.png" alt="" class="img-responsive">
-  </div>
-  <div class="text-desc">
-  <h6>Education</h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
-  </div>
-  </div>
-  </div>
-  <div class="content-in">
-  <div class="port effect-1">
-  <div class="image-box">
-  <img src="images/fi3.jpg" alt="" class="img-responsive">
-  </div>
-  <div class="text-desc">
-  <h6>Education</h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
-  </div>
-  </div>
-  </div>
-  <div class="content-in">
-  <div class="port effect-1">
-  <div class="image-box">
-  <img src="images/fi2.jpg" alt="" class="img-responsive">
-  </div>
-  <div class="text-desc">
-  <h6>Education</h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
-  </div>
-  </div>
-  </div>
-  <div class="content-in">
-  <div class="port effect-1">
-  <div class="image-box">
-  <img src="images/fi4.jpg" alt="" class="img-responsive">
-  </div>
-  <div class="text-desc">
-  <h6>Education</h6>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor .</p>
-  </div>
-  </div>
-  </div>
-  <div class="clearfix"> </div>
-  </div>
-  <!---->
   <!--footer-->
-  <div class="footer">
+<div class="footer">
   <div class="container">
-  <div class="col-md-6 footer-left">
-  <h3>Information</h3>
-  <p class="para">At vero eos et accusamus et iusto odio dignissimos
-  ducimus qui blanditiis praesentium voluptatum deleniti at
-  que corrupti quos dolores et quas molestias excepturi sint
-  occaecati cupiditate non provident, similique sunt.</p>
-  <h3>Newsletter<label></label></h3>
-  <form action="#" method="post">
-  <input type="text" value="Name" name="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-  <input type="email" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-  <input type="submit" value="Submit">
-  </form>
+    <div class="col-md-6 footer-left">
+      <h3>Information</h3>
+      <p class="para">This is website is completely made for helping purpose, so that  students can get their required information without any difficulty. </p>
+    </div>
+    <div class="col-md-6 footer-right">
+      <h3>Contact Us</h3>
+      <ul class="con-icons">
+        <li>
+            <i  style="color: white" class="fa fa-info-circle" aria-hidden="true"></i>
+            knowmyvit@gmail.com</li>
+      </ul>
+      <p class="copy-right">© 2016 Academic. Made by Vinit <i  style="color: white" class="fa fa-heart" aria-hidden="true"></i>
+      </p>
+    </div>
+    <div class="clearfix"></div>
   </div>
-  <div class="col-md-6 footer-right">
-  <h3>Contact Us</h3>
-  <ul class="con-icons">
-  <li><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>+123 456 7890</li>
-  <li><a href="mailto:info@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>info@example.com</a></li>
-  </ul>
-  <p class="copy-right">© 2016 Academic. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-  </div>
-  <div class="clearfix"></div>
-  </div>
-  </div>
+</div>
 <!-- footer ends -->
 </body>
 </html>

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Academic A Education Category Flat Bootstrap Responsive Website Template | Gallery :: w3layouts</title>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,15 +23,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header head">
   <div class="container">
     <div class="head-top">
-      <div class="logo">
-        <a href="index.html"><img src="images/bo.png" alt="" title="Academic"></a>
-      </div>
-      <div class="login">
-        <ul class="nav-login">
-          <li><a href="#" data-toggle="modal" data-target="#myModal1">Login</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#myModal2">Signup</a></li>
-        </ul>
-      </div>
+
+
       <div class="clearfix"></div>
     </div>
   </div>
@@ -65,8 +57,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <li ><a class="" href="/user/show/<%= user.id %>">Home </a></li>
               <li><a href="/user/hostels_1/<%= user.id %>">Hostels</a></li>
               <li><a href="/user/mess_1/<%= user.id %>">Mess</a></li>
-              <li><a href="/da/index_da/">Digital assignment</a></li>
+              <li><a href="/da/index_da/<%= session.User.id %>">Assignments</a></li>
               <li><a href="/user/restaurents_1/<%= user.id %>">Restaurents</a></li>
+              <li><a href="/url/index_url/<%= user.id %>">Doubts</a></li>
+
             </ul>
             <% } %>
           </div><!-- /.navbar-collapse -->
@@ -86,26 +80,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <div class="container">
     <div class="about-head">
       <h2>Mess</h2>
-      <p> Now you can see all types of mess.</p>
+      <p> Now you can see all types of mess and choose wisely.</p>
     </div>
 
     <div class="about-grids">
       <div class="col-md-5 about-grid1">
         <h4 >D-Annex Mess</h4>
         <div class="about-img">
-          <img src="/images/foodpark.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
+          <img src="/images/dannex.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
         </div>
       </div>
       <div class="col-md-7 about-grid">
         </br></br>
-        <h5>D-Annex Mess is the best mess in VIT. Quality and Quantity both are good and they offer other items also like ice cream, sweets etc</h5>
+        <h5>D-Annex Mess is the best mess in VIT. Quality and Quantity both are good and they offer other items also like ice cream once in a week and sweets in every day.etc</h5>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
-        <i class="fa fa-star-half-o fa-2x" aria-hidden="true" style="color: yellow; "></i>
-        <!--<i class="fa fa-star-o fa-2x" aria-hidden="true" style="color: yellow; "></i>-->
       </div>
       <div class="clearfix"></div>
     </div>
@@ -121,8 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
       <div class="col-md-7 about-grid">
         </br></br>
-        <h5>Food Park is good but costly. Quality is very good but quantity is sufficient.</h5>
-        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <h5>Food Park is good but costly as it is a paid mess. You will be given 150rs per day and for more, you have to pay. Quality is very good but quantity is sufficient.Also, menu is limited so you may get bored after some months.</h5>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
@@ -145,12 +136,57 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
       <div class="col-md-7 about-grid">
         </br></br>
-        <h5>Food Park is almost same as Food Park.This is also paid mess. It depends on your hostel's location and according to thst you can opt</h5>
+        <h5>Food Park is almost same as Food Park.This is also paid mess. It depends on your hostel's location and according to that you can choose</h5>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+
+
+
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1">
+
+        <h4 >L Block</h4>
+        <div class="about-img">
+          <img src="/images/lblock.png" class="img-responsive" alt="" style="height: 100%; width: 80%">
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5>L block mess is good and mostly chosen by students who are in L block. You can get this easily at the time of changing the mess.</h5>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+
+
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1">
+
+        <h4 >K Block</h4>
+        <div class="about-img">
+          <img src="/images/kblock3.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5>Quality and quantity of food in K block, both are good.</h5>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star-half-o fa-2x" aria-hidden="true" style="color: yellow; "></i>
 
 
       </div>
@@ -169,7 +205,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
       <div class="col-md-7 about-grid">
         </br></br>
-        <h5>F-Block Mess is fine. Mostly F-Block students only opt this mess.</h5>
+        <h5>F-Block Mess is fine.Chosen by very less students so no disturbances. Mostly F-Block students only opt this mess.</h5>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
 
 
 
@@ -181,7 +220,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="about-grids">
       <div class="col-md-5 about-grid1">
 
-        <h4 >Food Park</h4>
+        <h4 >B-Annex Mess</h4>
+        <div class="about-img">
+          <img src="/images/bannex.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5>B_annex mess is good. Quality of this mess is fine.</h5>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star-half-o fa-2x" aria-hidden="true" style="color: yellow; "></i>
+
+
+
+
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1">
+
+        <h4 >H Block</h4>
         <div class="about-img">
           <img src="/images/foodpark.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
         </div>
@@ -189,12 +253,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       </div>
       <div class="col-md-7 about-grid">
         </br></br>
-        <h5>Food Park is good but costly. Quality is very good but quantity is sufficient.</h5>
+        <h5>H block mess is fine.</h5>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star-half-o fa-2x" aria-hidden="true" style="color: yellow; "></i>
+
+
+
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="about-grids">
+      <div class="col-md-5 about-grid1">
+
+        <h4 >J Block</h4>
+        <div class="about-img">
+          <img src="/images/foodpark.png" class="img-responsive" alt="" style="height: 80%; width: 80%">
+        </div>
+
+      </div>
+      <div class="col-md-7 about-grid">
+        </br></br>
+        <h5>J block mess is same as h block mess.</h5>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
         <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
-        <i class="fa fa-star  fa-2x" aria-hidden="true" style="color: yellow; "></i>
+        <i class="fa fa-star-half-o fa-2x" aria-hidden="true" style="color: yellow; "></i>
+
 
 
       </div>

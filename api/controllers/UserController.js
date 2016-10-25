@@ -85,15 +85,7 @@ module.exports = {
     });
   },
 
-  hostels_2 : function(req, res, next) {
-    User.findOne(req.param('id'), function foundUser(err, user) {
-      if (err) return next(err);
-      if (!user) return next();
-      res.view({
-        user: user
-      });
-    });
-  },
+
 
   singlebedac : function(req, res, next) {
     User.findOne(req.param('id'), function foundUser(err, user) {
@@ -205,15 +197,7 @@ module.exports = {
     });
   },
 
-  mess_2 : function(req, res, next){
-    User.findOne(req.param('id'), function foundUser(err, user) {
-      if (err) return next(err);
-      if (!user) return next();
-      res.view({
-        user: user
-      });
-    });
-  },
+
 
   restaurents_1 : function(req, res, next){
     User.findOne(req.param('id'), function foundUser(err, user) {

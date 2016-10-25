@@ -19,7 +19,7 @@ module.exports = {
 
       console.log(url.updateDate);
 
-      res.redirect('/url/index_url');
+      res.redirect('/url/index_url/' );
 
        // res.redirect('/url/show_url/' + url.id);
 
@@ -54,6 +54,7 @@ module.exports = {
     Url.find(function foundUrls(err, urls){
       if(err) return next(err);
       res.view({
+
         urls: urls
       });
     });

@@ -30,6 +30,14 @@ module.exports.policies = {
     login : "flash",
     logout : "flash",
     // '*' : "admin"
+  },
+
+  da : {
+    'index_da' : 'userCanSeeProfile'
+  },
+
+  url : {
+    'index_url' : 'userCanSeeProfile'
   }
 
   /***************************************************************************

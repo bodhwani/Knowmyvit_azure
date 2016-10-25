@@ -1,9 +1,3 @@
-/*Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
-
 body{
   background:#fff;
   font-family: 'Catamaran', sans-serif;
@@ -47,7 +41,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 }
 
 .header1{
-  background:url(../images/home_final4.jpg) no-repeat right;
+  background:url(../images/home_final10.jpg) no-repeat right;
   /*filter: brightness(40%);*/
 
   width:100%;
@@ -325,10 +319,11 @@ ul.nav-login li a:hover {
   position:relative;
 }
 .banner-text h2{
-  font-family: 'Montserrat', sans-serif;
-  font-size:5em;
-  color: #e6ee9c;
+  font-family: 'FontAwesome', "DecoType Naskh";
+  font-size:6em;
+  color: #f0f4c3;
 }
+/*#f7e1b5*/
 .banner-text img{
   filter: brightness(80%);
 
@@ -336,19 +331,16 @@ ul.nav-login li a:hover {
 
 .banner-text p{
   letter-spacing:2px;
-  font-size:1em;
-  color:#e6ee9c;
+  font-size:2.5em;
+  color:#f0f4c3;
   text-align: left;
-  margin: 0 auto;
+  margin:  0 auto;
   text-align: center;
   width: 32%;
 }
-.banner-text p:after{
-  content:"";
-  display: inline-block;
-  width: 163px;
-  height: 2px;
-}
+
+
+
 .banner-text1{
   font-size:1em;
   color:#fffde7;
@@ -1355,7 +1347,7 @@ ul.con-icons{
 .test-wrapper img {
   position: absolute;
   left: 0;
-  width: 18%;
+  width: 48%;
   border: 2px solid #B7112A;
 }
 .test-grid p {
@@ -1578,6 +1570,9 @@ ul.nav.nav-pills {
   .content-mid {
     padding: 5em 0;
   }
+  .content-mid p{
+    padding: 5em 0;
+  }
   .services {
     padding: 5em 0 0em;
   }
@@ -1610,7 +1605,7 @@ ul.nav.nav-pills {
     width: 70%;
   }
   .about-grids {
-    margin-top: 2em;
+    margin-top: 1em;
   }
   .about-right {
     padding:1em 0 0;
@@ -2060,8 +2055,11 @@ ul.nav.nav-pills {
   }
   .ser-top h5 {
     font-size: 1.3em;
+    text-align: right;
   }
   .ser-top p {
+    text-align: right;
+
     font-size: 0.9em;
   }
   .test h3 {

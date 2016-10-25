@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Academic A Education Category Flat Bootstrap Responsive Website Template | Gallery :: w3layouts</title>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <link rel="stylesheet" type="text/css" href="../../styles/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="../../styles/materialicons.css">
@@ -55,8 +54,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <li ><a class="" href="/user/show/<%= session.User.id %>">Home </a></li>
               <li><a href="/user/hostels_1/<%= session.User.id %>">Hostels</a></li>
               <li><a href="/user/mess_1/<%= session.User.id %>">Mess</a></li>
-              <li><a href="/da/index_da/">Digital assignment</a></li>
+              <li><a href="/da/index_da/<%= session.User.id %>">Assignments</a></li>
               <li><a href="/user/restaurents_1/<%= session.User.id %>">Restaurents</a></li>
+              <li><a href="/url/index_url/<%= session.User.id %>">Doubts</a></li>
+
             </ul>
             <% } %>
           </div><!-- /.navbar-collapse -->
